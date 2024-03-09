@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" width="device-witdh" , initial-scale="1.0">
+      
+       <title>(56) Tuntun Tube</title>
+    
+        <link rel="icon" href="https://www.youtube.com/s/desktop/77953cee/img/favicon_144x144.png" sizes="144x144">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <style>
+           body{
+            font-family: Roboto,Arial;
+            height: 1700px;
+            padding-top: 120px;
+            }
+           p{
+            margin-top: 0;
+            margin-bottom: 0;
+           }
+          .video-grid{
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+           row-gap: 30px;
+           column-gap: 15px;
+         margin-left: 81px;
+         width: 0;
+          }
+          @media (max-width:854px){
+            .video-grid{
+              grid-template-columns: 1fr 1fr;
+              column-gap: 10px;
+              margin-left: 70px;
+}
+.Shorts-preview-grid{
+  grid-template-columns: 1fr 1fr 1fr ;
+
+}
+          }
+          @media(min-width:1700px ) and (max-width:854px){
+            .video-grid{
+              grid-template-columns: 1fr 1fr 1fr;
+            }
+          }
+          
+          @media (min-width:1700px ){
+            .video-grid{
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+          }
+          .checkmark{
+  color: white;
+  background-color: rgb(96, 96, 96);
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 10px;
+  font-size: 8px;
+}
+          .Header{
+    display: flex;
+    height: 60px;
+    margin-top: 0;
+    justify-content: space-between;
+    margin-top: -8px;
+    position: fixed;
+    z-index: 1000;
+   width: 100%;
+   background-color: white;
+   top: 5px;
+   padding-bottom: 48px;
+   }
+    .Header-Left-Section{
+      width: 230px;
+      display: flex;
+      align-items: center;
+      margin-top: 3px;
+      margin-left: 16px;
+      
+    }
+    .Youtube-Logo{
+      height: 40px;
+      margin-bottom: 7px;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+    .Hamberger{
+      height: 25px;
+      margin-top: 2px;
+      margin-right: 7px;
+      cursor: pointer;
+    }
+    .Middle-Section{
+      flex: 1;
+      max-width: 550px;
+      display: flex;
+      align-items: center;
+      margin-top: 4px;
+      margin-left: -100px;
+    }
+    .Search-Bar{
+      height: 35px;
+      margin-top: -3px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(204, 204, 204);
+      flex: 1;
+      max-width: 500px;
+      font-size: 15px;
+      font-weight: 500;
+     padding-left: 15px;
+     width: 0;
+     flex: 1;
+    outline: none;
+    z-index: 1000;
+    }
+    .Search-Bar:focus{
+      border:1px solid #3f51b5;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
+    }
+    .Microphone{
+      background-color: rgb(242, 242, 242);
+      width: 35px;
+      border-radius: 20px;
+      border:none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 12px;
+      position: relative;
+     
+    }
+    .Microphone .tooltip{
+      position: absolute;        
+        bottom: 3px; 
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background-color: rgba(111, 111, 111,0.8);
+        color: white;
+        font-size: 12px;
+        border-radius: 5px;
+        left: 40px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s;
+        white-space:nowrap;
+    }
+    .Microphone:hover .tooltip{
+      opacity: 1;
+    }
+    .Microphone:active{
+      background-color: rgb(195, 195, 195);
+    }
+    .Microphone:hover{
+      background-color: rgb(217, 217, 217);
+    }
+    .Micro-ok{
+      height: 25px;
+      width: 25px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left:4px ;
+      padding-right: 4px;
+      cursor: pointer;
+    }
+    .Header-Right-Section{
+      width: 150px;
+      margin-right: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   
+    }
+
+      .Search-Icon{
+        width: 40px;
+        height: 38px;
+        border-color: rgb(204, 204, 204);
+        border-width: 1px;
+        border-style: solid;
+        margin-top: -3px;
+        margin-left: -1px;
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 4px;
+        padding-bottom: 2px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width: 60px;
+        background-color: rgb(248, 248, 248);
+        cursor: pointer;
+        position: relative;
+      }
+      .Search-Icon:hover{
+        background-color: rgb(240, 240, 240);
+
+      }
+      .Search-button{
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+      }
+      .Search-Icon .tooltip{
+        position: absolute;        
+        top: 4px; 
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background-color: rgba(111, 111, 111,0.8);
+        color: white;
+        font-size: 12px; 
+        border-radius: 5px;
+        left: 70px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s;
+        z-index: 10;
+      }
+      .Search-Icon:hover .tooltip{
+        opacity: 1;
+      }
+      .Upload-Ho{
+        position: relative;
+      }
+      .Upload-Ho .tooltip{
+       
+        position: absolute;        
+        top: 0px; 
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background-color: rgba(111, 111, 111,0.8);
+        color: white;
+        font-size: 12px; 
+        border-radius: 5px;
+        right: 30px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s;
+        z-index: 10;
+      }
+    .Upload-Ho:hover .tooltip{
+      opacity: 1;
+    }
+    .Notiti .tooltip{
+      position: absolute;        
+        top: 0px; 
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background-color: rgba(111, 111, 111,0.8);
+        color: white;
+        font-size: 12px; 
+        border-radius: 5px;
+        right: 30px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s;
+        z-index: 10;
+    }
+    .Notiti:hover .tooltip{
+     opacity: 1;
+    }
+      .Notications-Header{
+        width: 28px;
+        margin-top: 4px;
+        cursor: pointer;
+      }
+      .Upload-Header{
+        width: 28px;
+        cursor: pointer;
+      }
+      .Cocomelon{
+        width: 40px;
+        border-radius: 16px;
+        cursor: pointer;
+      }
+      .Recommendation{
+        margin-left: 85px;
+        padding-bottom: 10px;
+        overflow: auto;
+        white-space: nowrap;
+        max-width: 1100px;
+        position: fixed;
+        z-index: 1000;
+        top: 57px;
+        padding-top: 8px;
+        display: flex;
+      }
+      .Recommendation::-webkit-scrollbar {
+        display: none;
+      }
+      .Recom{
+        background-color: rgb(238, 238, 238);
+        border-radius: 6px;
+        border:none;
+        font-weight:500;
+        font-size: 15px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-family:Roboto,Arial;
+        font-weight: 500;
+        margin-right: 8px;
+        cursor: pointer;
+      }
+      .Recom:hover{
+        background-color: rgb(229, 229, 229);
+      }
+  
+
+         
+      .First-Recom{
+        background-color: black;
+        color: rgb(229, 229, 229);
+      }
+      .First-Recom:hover{
+        background-color: black;
+        color: rgb(229, 229, 229);
+      }
+           .video-info-grid{
+            display: grid;
+            grid-template-columns: 35px 1fr;
+            column-gap: 15px;
+            margin-top: 13px;
+            
+           }
+           .Tool{
+              position: relative;
+            }
+
+            .channel-profile{
+                height: 35px;
+                border-radius: 20px;
+                border:none;
+            }
+
+            .channel-name{
+                font-size: 12px;
+                color: rgb(96,96,96);
+                margin-bottom: 2px;
+                width: 80px;
+                white-space: nowrap;
+            }
+ 
+            .channel-views{
+                color: rgb(96,96,96);
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                line-height: 18px;
+            }
+            .dot{
+                font-size: 20px;
+                margin-left: 2px;
+                margin-right: 2px;
+            }
+ 
+          .second{
+            position:absolute;
+            top: 0;
+            right: 0;
+            left:41px;
+            bottom: 0;
+            object-fit: contain;
+            opacity: 1;
+            z-index: 0;        
+            width: 75%;
+            height: 100%;
+            z-index: 0;
+          }
+            .beast-thumb{
+            background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm12MnJjZ2NvcGw1aDZoemcxMmRxbWt3cGZmYm83b2ZweWxncDdkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j39MJEDFDD3j7AMdV2/source.gif); 
+            }
+            .beast-thumb:hover{
+              background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm12MnJjZ2NvcGw1aDZoemcxMmRxbWt3cGZmYm83b2ZweWxncDdkZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j39MJEDFDD3j7AMdV2/source.gif); 
+            }
+
+            .The-pace-div:hover{
+              background-color: black;
+            }
+   
+            .Veritasium{
+              background-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExczF6bHBmbGh6dGVoOG0xZGk3YndreTl0MW1zYmtoeGR5ZDZ0NTNoZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TQHj46ybvuvw2oAH92/source.gif) ;
+            }
+            .Veritasium:hover{
+              background-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExczF6bHBmbGh6dGVoOG0xZGk3YndreTl0MW1zYmtoeGR5ZDZ0NTNoZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TQHj46ybvuvw2oAH92/source.gif) ;
+            }
+            .King{
+              background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3k5NmU4bjlpbWdzanQzbnBjNzFtY3V0ejZxOWJ0MmtiNm0yM3BycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5iWhbzK5it1j4IN7fw/source.gif);
+            }
+            .King:hover{
+              background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3k5NmU4bjlpbWdzanQzbnBjNzFtY3V0ejZxOWJ0MmtiNm0yM3BycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5iWhbzK5it1j4IN7fw/source.gif);
+            }
+            .cheackmark-align{
+              display: flex;
+              align-items: center;
+            }
+            
+            .America{
+              background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWp1dDRkOTd5aHQ1bTg3a3Iza3YxNTVhNTY2cmhtbDBlc3B2ZnYxcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cffCbl6UxKFwDcbcHe/source.gif);       
+                 }
+            .America:hover{
+              background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWp1dDRkOTd5aHQ1bTg3a3Iza3YxNTVhNTY2cmhtbDBlc3B2ZnYxcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cffCbl6UxKFwDcbcHe/source.gif);       
+            }
+            .Zoo{
+              background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExODRzOWsxNm1nY2tndWlrbHZsaTV5ZmJobXM2YmNkeDhiczZqMW1zdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MjcDCGWIfT7UE10oyH/source.gif);
+          }
+            .Zoo:hover{
+              background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExODRzOWsxNm1nY2tndWlrbHZsaTV5ZmJobXM2YmNkeDhiczZqMW1zdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MjcDCGWIfT7UE10oyH/source.gif);
+  
+            }
+           .shorts{
+            margin-top: 50px;
+            margin-left: 83px;
+
+           }
+           .Title-Shorts{
+            display: flex;
+            align-items: center;
+           }
+           .shorts{
+            position: relative;
+            width: 1030px;
+            height: 560px;
+        
+           }
+       
+           .Close-Shorts:hover{
+            border-radius: 100px;
+            background-color: rgb(229, 229, 229);
+            width: 20px;
+           }
+           .Close-Shorts:active{
+            background-color: rgb(206, 206, 206);
+           }
+           .Short-logo{
+              width: 40px;
+            }
+            .Text-Short{
+              font-family: Roboto,Arial;
+              font-weight: 700;
+              font-size: 20px;
+            }
+
+            .Shorts-preview{
+              width: 200px;
+              height: 340px;
+              object-fit:cover;
+              object-position: right;
+              border-radius: 10px;
+              cursor: pointer;
+            }
+            .Shorts-Picture{
+              width: 220px;
+              height: 400px;
+              object-fit: cover;
+              object-position: center;
+              border-radius: 8px;
+        
+            }
+            .Shorts-Picture:hover{
+              transition:  border-radius  .30s;
+               border-radius: 1px;
+            }
+            .First-short{
+              font-weight: 500;
+              font-size: 13px;
+            }
+            .Views-shorts{
+              color: rgb(115, 115, 115);
+              font-size: 12px;
+              margin-top: 4px;
+            }
+            .Title-Shorts{
+              margin-bottom: 20px;
+            }
+            .Shorts-preview-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+            column-gap: 30px;
+            cursor: pointer;
+            }
+                    
+            .Text-shorts{
+              line-height: 20px;
+              margin-top: 5px;
+              width: 175px;
+            }
+            .icon-2{
+              right: 0px;
+              background: linear-gradient(-90deg, #fff 70%, transparent);
+              z-index: 10000;
+             width: 60px;
+             height: 35px;
+             justify-content: flex-end;
+            }
+            .Gradient{
+              justify-self: end;
+              z-index: 100;
+             right: 0;
+             top: 0;
+             bottom: 0;
+              position: sticky;
+              height: 28px;
+              margin-left: 10px;
+            }
+            .Arrow-idk{
+              position: sticky;
+              justify-self: end;
+              z-index: 10000;
+             right: 0;
+             top: 0;
+             bottom: 0;
+             align-items: center;
+             padding-top: 0px;
+             font-size: 20px;
+             padding-left: 2px;
+             padding-right: 2px;
+             border-radius: 50px;
+             cursor: pointer;
+        
+            }
+            .Arrow-idk:hover{
+              background-color: rgb(229, 229, 229);
+            }
+            .Arrow-Head{
+          width: 25px;
+          color: black;
+          height: 25px;
+          object-fit: cover;
+          object-position: center;
+            }
+            hr{
+              width:110%;text-align:left;margin-left:0;
+              color: rgb(229, 229, 229);
+              position: absolute;
+              bottom: 0px;
+              height:2px;border: width 1px;;
+            }
+            .Ending-shorts{
+              display: flex;
+              align-items: center;
+       
+            }
+            .show-more{
+              position: absolute;
+              bottom: -8px;
+              left: 38%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-family: Roboto,Arial;
+              font-weight: 500;
+             padding-left: 40px;
+             padding-right: 40px;
+              width: 300px;
+              padding-top: 6px;
+              padding-bottom: 6px;
+              border-radius: 18px;
+              border-color: rgb(229, 229, 229);
+              border-width: 1px;
+              border-style: solid;
+              background-color: white;
+              cursor: pointer;
+            }
+            .show-more:hover{
+              background-color: rgb(229, 229, 229);
+            }
+            .Down{
+              height: 20px;
+              padding-left: 4px;
+            }
+            .Video-Time{
+              background-color: rgba(0,0,0,0.8);
+              color: white;
+              padding: 2px;
+              padding-left: 6px;
+              padding-right: 6px;
+              border-radius: 6px;
+              border:none;
+              position: absolute;
+              bottom: 5px;
+              right: 5px;
+              font-family: Roboto,Arial;
+              font-weight: 500;
+              font-size: 13px;
+             }
+             .second-lot{
+              margin-left: 0;
+              margin-top: 200px;
+             }
+             .Notiti{
+              position: relative;
+             }
+             .Notifi{
+              position: absolute;
+              top:1px;
+              right: -8px;
+              background-color: rgb(204, 0, 0);
+              border-radius: 8px;
+              color: white;
+              font-size: 13px;
+              padding-left: 2px;
+              padding-right: 2px;
+             }
+             .KGF{
+              background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHFpMWgzMHNxdWRtb3U3ZzYwb2xwNWowNnAycnRtZ2c2MXdqdGRpYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pU64STwBL1p5c4vAEP/source.gif);
+             }
+             .KGF:hover{
+              background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHFpMWgzMHNxdWRtb3U3ZzYwb2xwNWowNnAycnRtZ2c2MXdqdGRpYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pU64STwBL1p5c4vAEP/source.gif);
+             }
+             .Left-SideBar{
+               position: fixed;
+               top: 55px;
+               bottom: 0;
+               left:0px;
+               width: 65px;
+               z-index: 1000000;
+               display: flex;
+               flex-direction: column;
+              align-items: center;
+              padding-top: 6px;
+              padding-bottom: 6px;
+              margin-left: 4px;
+               background-color: white;
+            }
+            .Side-Bar{
+              height: 65px;
+              padding-left: 4px;
+              padding-right: 6px;
+              margin-bottom: 2px;
+              border-radius: 8px;
+              padding-top: 8px;
+              padding-bottom: 8px;
+              width: 65px;
+              display: flex;
+              margin-left: 4px;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              cursor: pointer;
+            }
+            .Side-Bar:hover{
+              background-color: rgb(242, 242, 242); 
+             }
+             .Side-Bar:active{
+              background-color: (160,160,160);
+             }
+               
+            .Side-Bar img{
+              height: 30px;
+              justify-content: center;
+              align-items: center;
+            }
+            .Side-Bar div{
+              font-size: 11px;
+              line-height: 20px;
+            }
+            .short-sidebar{
+              border-radius: 60px;
+              width: 35px;
+            }
+            .smaller{
+              width: 25px;
+              padding-left: px;
+            }
+          a{
+            text-decoration: none;
+            color: black;
+          }
+          .shorts a{
+            text-decoration: none;
+            
+          }
+          .Chan .tooltip{
+            position: absolute;        
+              bottom: 22px; 
+              padding-left: 8px;
+              padding-right: 8px;
+              padding-top: 8px;
+              padding-bottom: 8px;
+              background-color: rgba(111, 111, 111,0.95);
+              color: white;
+              font-size: 12px; 
+              border-radius: 5px;
+              left: -5px;
+              pointer-events: none;
+              opacity: 0;
+              transition: opacity 0.15s;
+              z-index: 10;
+              white-space: nowrap;
+             
+          }
+          .Chan:hover .tooltip{
+            opacity: 1;
+          }
+          .Chan{
+            position: relative;
+                width: 63px;
+          }
+
+          .Mr-Hover{
+                width: 63px;
+          }
+          .King-net{
+            width: 160px;
+            display: flex;
+            align-items: center;
+          }
+          .Nam .tooltip{
+            bottom: 30px;
+          }
+          .video .Video-Picture{
+            border-radius: 10px;
+                z-index:1;
+                width: 370px;
+                height: 220px;
+                object-fit: cover;
+              object-position: center;
+          }
+          .video:hover .Video-Picture{
+            opacity: 0;
+              transition: opacity  0s .50s, border-radius  .30s;
+              border-radius: 1px;
+          }
+          .video:hover .video-thumbnail{
+            border-radius: 1px;
+              transition: border-radius 0.3s , opacity 0.15s;
+          }
+          .video:hover .Video-Time{
+            opacity: 0;
+          }
+          .video-thumbnail{
+              border-radius: 10px;
+              width: 100%;
+              height: 220px;
+              position: relative;
+              object-fit: cover;
+              object-position: center;
+              cursor: pointer;
+            }
+            .video-thumbnail .Video-Time{
+              pointer-events: none;
+            }
+            .video:hover .The-pace-div{
+              background-color: black;
+            }
+            .video-info .Dots{
+              position: absolute;
+              width: 4px;
+              height: 20px;
+              right: 13px;
+              opacity: 0;
+              transition: opacity 0.15s;
+              pointer-events: none;
+              border: none;
+              border-radius: 100px;
+            }
+
+            .video-info{
+            width: 315px;
+                position: relative;
+           }
+           .video-info:hover .Dots{
+            opacity: 1;
+           }
+           .video-name{
+                font-family:Roboto,Arial;
+                font-weight: 500;
+                margin-bottom: 8px;
+                color: black;
+                width: 300px;
+                
+            }
+            .Close-Shorts{
+            width: 18px;
+            position: absolute;
+            top: -45px;
+            right: -110px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            cursor: pointer;
+           }
+            .Not-Interested{
+              position: relative;
+            }
+            .Not-Interested .tooltip{
+              position: absolute;        
+              bottom: 10px; 
+              padding-left: 8px;
+              padding-right: 8px;
+              padding-top: 8px;
+              padding-bottom: 8px;
+              background-color: rgba(111, 111, 111,0.95);
+              color: white;
+              font-size: 12px; 
+              border-radius: 5px;
+              right: -60px;
+              pointer-events: none;
+              opacity: 0;
+              transition: opacity 0.15s;
+              z-index: 10;
+              white-space: nowrap;
+            }
+           .Not-Interested:hover .tooltip{
+            opacity: 1;
+           }
+           .Sail{
+            background-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGN4M3oxbmVheTJtY3oyNjl2cjlhbjF0NGJpc29yMGhiNnJlZnBtZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EO76Ik4oXf9PVeI52K/source.gif);
+           }
+           .Sail:hover{
+            background-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGN4M3oxbmVheTJtY3oyNjl2cjlhbjF0NGJpc29yMGhiNnJlZnBtZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EO76Ik4oXf9PVeI52K/source.gif);
+           }
+           .Coding{
+            background-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2RsNHA2c2V4a2txMmFqdnl6bWtudG05ZXh1NmUwc3lhdGhnNHlmMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oJNDJ8ujMqQ0OfLT4j/giphy.gif);
+           }
+           .Coding:hover{
+            background-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2RsNHA2c2V4a2txMmFqdnl6bWtudG05ZXh1NmUwc3lhdGhnNHlmMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oJNDJ8ujMqQ0OfLT4j/giphy.gif);
+           }
+           ::-webkit-scrollbar{
+            width: 0.5em;
+        background-color: #f5f5f5;
+           }
+           ::-webkit-scrollbar-thumb{
+            background-color: #606060;
+            border-radius: 8px;
+           }
+           ::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+      }
+        </style>
+    </head>
+    <body>
+    <header class="Header">
+      <div class="Header-Left-Section">
+        <img src="icons/hamburger-menu.svg" class="Hamberger">
+      <a href="https://www.youtube.com/"><img src="icons/logo.svg" class="Youtube-Logo"></a> 
+      </div>
+      <div class="Middle-Section">
+        <input  type="text" placeholder="Search" class="Search-Bar">
+        <button class="Search-Icon"><img src="icons/Search-Icon.svg" class="Search-button"><div class="tooltip">Search</div> </button>
+        <button class="Microphone"><img src="icons/Mic.svg" class="Micro-ok"><div class="tooltip">Search with your voice</div></button>
+      </div>
+      <div class="Header-Right-Section">
+      <div class="Upload-Ho">
+        <img src="icons/upload.svg" class="Upload-Header">
+        <div class="tooltip">Create</div>
+      </div>  
+       <div class="Notiti">
+        <img src="icons/notifications.svg" class="Notications-Header">
+        <span class="Notifi">9+</span>
+        <div class="tooltip">Notifications</div>
+       </div>
+      <a href="https://www.youtube.com/@Cocomelon"><img src="icons/Coco.jpg"  class="Cocomelon"></a>  
+      </div>
+    </header> 
+    <nav class="Recommendation">
+      <button class="Recom First-Recom">All</button>
+      <button class="Recom">Thoughts</button>
+      <button class="Recom">Live</button>
+      <button class="Recom">AI</button>
+      <button class="Recom">Music</button>
+      <button class="Recom">QBASIC</button>
+      <button class="Recom">Mixes</button>
+      <button class="Recom">History</button>
+      <button class="Recom">Computer Science</button>
+      <button class="Recom">Robotics</button>
+      <button class="Recom">Math</button>
+      <button class="Recom">NASA</button>
+      <button class="Recom">Related</button>
+      <button class="Recom">Sci-fi</button>
+      <button class="Recom">Ronaldo</button>
+      <button class="Recom">Neils Bohr</button>
+      <button class="Recom">Hawking radiation</button>
+      <button class="Recom">Recently uploaded</button>
+      <button class="Recom">Watched</button>
+      <button class="Recom">New to you</button> 
+   <div class="Gradient"><div class="icon-2"></div></div>
+   <div class="Arrow-idk"><img class="Arrow-Head" src="icons/arrow.svg">  </div>
+    </nav>
+   <nav class="Left-SideBar">
+    <a href="https://www.youtube.com/"> <div class="Side-Bar">
+      <img src="icons/home.svg">
+      <div>Home</div>
+    </a>
+    </div>
+   <a href="https://www.youtube.com/shorts/"><div class="Side-Bar">
+      <img src="icons/text.svg" class="short-sidebar">
+      <div>Shorts</div>
+    </a> 
+    </div>
+    <div class="Side-Bar ">
+      <img src="icons/subscriptions.svg" class="smaller">
+      <div>Subscriptions</div>
+ 
+    </div>
+    <div class="Side-Bar">
+      <img src="icons/library.svg" class="smaller">
+      <div>You</div>
+    </nav>
+   </div>
+   <main>
+    <section class="video-grid">
+      <div class="video">
+        <a href="https://www.youtube.com/watch?v=lXO4lEIeAXo">
+    <a href="https://www.youtube.com/watch?v=lXO4lEIeAXo"><div class="video-thumbnail The-pace-div"><img src="hqdefault.webp" alt="In The Zone" class="Video-Picture"><img src="e pace.png" class="second"><img src="e pace.png" class="second"><button class="Video-Time">3:24</button> </div></a>  
+    <div class="video-info-grid">
+      <div class="video-channel"> <a href="https://www.youtube.com/channel/UCTDNGQR8ENqF7VAWPxkXNUw"><img src="unnamed.jpg" class="channel-profile"> </a></div> 
+      <div class="video-info">
+        <img src="icons/three-dot.svg" class="Dots">
+        <a href="https://www.youtube.com/watch?v=lXO4lEIeAXo"> <p class="video-name">In The Zone</p></a>
+     <div class="Chan"><a href="https://www.youtube.com/channel/UCTDNGQR8ENqF7VAWPxkXNUw"><p class="channel-name Pace-Hover">The Pace &#9834 </p> <div class="tooltip">The Pace</div> </div> </a>  
+          <p class="channel-views">13 views <span class="dot">&#183;</span> 2 years ago </p>
+      </a>
+        </div>
+    </div>  
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=0e3GPea1Tyg&t">
+      <a href="https://www.youtube.com/watch?v=0e3GPea1Tyg&t"> <div class="video-thumbnail beast-thumb"><img src="download.jpg" alt="$456,000 Squid Game In Real Life!" class="Video-Picture beast"> </a><button class="Video-Time">25:41</button></div>
+    <div class="video-info-grid beast-info">
+     <div class="video-channel"> <a href="https://www.youtube.com/@MrBeast"><img src="channels4_profile.jpg" class="channel-profile"></a></div>   
+      <div class="video-info">
+        <img src="icons/three-dot.svg" class="Dots">
+        <a href="https://www.youtube.com/watch?v=0e3GPea1Tyg&t=0s">  <p class="video-name">$456,000 Squid Game In Real Life!</p>   
+          <div class="Chan"><a href="https://www.youtube.com/@MrBeast"><p class="channel-name Mr-Hover">MrBeast <span class="checkmark">&#10003;</span></p> <div class="tooltip">MrBeast</div> </div> </a>  
+          <p class="channel-views">580M views <span class="dot">&#183;</span> 2 years ago </p>
+        </div>
+    </div> 
+  </a> 
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=AF8d72mA41M&t">
+      <div class="video-thumbnail Veritasium"><img src="TItle-veri.jpg" alt="Veritasium" class="Video-Picture"><button class="Video-Time">33:45</button></div>
+    <div class="video-info-grid">
+      <a href="https://www.youtube.com/@veritasium"><div class="video-channel"><img src="veri.jpg" class="channel-profile"></a> </div>
+      <div class="video-info">
+        <img src="icons/three-dot.svg" class="Dots">
+        <a href="https://www.youtube.com/watch?v=AF8d72mA41M&t">
+          <p class="video-name">Why It Was Almost Impossible to Make the Blue LED</p>
+          <div class="Chan"><a href="https://www.youtube.com/@veritasium"><p class="channel-name">Veritasium <span class="checkmark">&#10003;</span> </p><div class="tooltip">Veritasium</div> </div></a>
+          <p class="channel-views">15M views <span class="dot">&#183;</span> 2 weeks ago </p>
+      </div>
+    </div>  
+  </a>
+  </div> 
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=Da-2h2B4faU&t">
+      <div class="video-thumbnail King"><img src="string.jpg" alt="Nutshell" class="Video-Picture"> <button class="Video-Time">8:00</button></div>
+    <div class="video-info-grid">
+    <a href="https://www.youtube.com/@kurzgesagt"><div class="video-channel"><img src="nutshell.jpg" class="channel-profile"> </a> </div>
+      <div class="video-info">
+        <img src="icons/three-dot.svg" class="Dots">
+        <a href="https://www.youtube.com/watch?v=Da-2h2B4faU&t">
+          <p class="video-name">String Theory Explained - What is The True Nature of Reality?</p>
+          <div class="Chan Nam"><a href="https://www.youtube.com/@kurzgesagt"><p class="channel-name King-net">Kurzgesagt - In a Nutshell <span class="checkmark">&#10003;</span> </p><div class="tooltip">Kurzgesagt - In a Nutshell</div> </div></a>
+        <div class="cheackmark-align">
+          <p class="channel-views">23M views <span class="dot">&#183;</span> 5 years ago </p>
+        </div> 
+      </div>
+    </div> 
+  </a> 
+  </div>
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=bDL1cghSkxw">
+    <div class="video-thumbnail KGF"><img src="Screenshot (2).png" alt="Full Movie" class="Video-Picture"><button class="Video-Time">1:15</button> </div>
+  <div class="video-info-grid">
+    <a href="https://www.youtube.com/@user-du6in2ry7i">
+    <div class="video-channel"><img src="high.jpg" class="channel-profile"> </a> </div>
+    <div class="video-info">
+      <img src="icons/three-dot.svg" class="Dots">
+      <a href="https://www.youtube.com/watch?v=bDL1cghSkxw">
+        <p class="video-name"> New Nepali Short Movie| Breaklee x Nepali | Short movie | By Sh...</p>
+        <div class="Chan"><a href="https://www.youtube.com/@MarkRober"><p class="channel-name"> Highlights Movies <span class="checkmark">&#10003;</span> </p><div class="tooltip">Highlights Movies</div> </div></a>
+        <p class="channel-views">13M views <span class="dot">&#183;</span> 1 hour ago </p>
+    </div>
+  </div>  
+  </a>
+  </div>
+
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=jNQXAC9IVRw">
+      <div class="video-thumbnail Zoo"><img src="jawed.jpg" alt="In The Zone" class="Video-Picture"> <button class="Video-Time">0:19</button></div>
+    <div class="video-info-grid">
+    <a href="https://www.youtube.com/@jawed">
+      <div class="video-channel"><img src="channel jawed.jpg" class="channel-profile"></a> </div>
+      <div class="video-info">
+        <img src="icons/three-dot.svg" class="Dots">
+        <a href="https://www.youtube.com/watch?v=jNQXAC9IVRw">
+           <p class="video-name">Me at the zoo</p>
+           <div class="Chan"><a href="https://www.youtube.com/@jawed"> <p class="channel-name">jawed <span class="checkmark">&#10003;</span> </p><div class="tooltip">jawed</div> </div></a>
+          <p class="channel-views">310M views <span class="dot">&#183;</span> 18 years ago </p>
+      </div>
+    </div>
+  </a>  
+  </div>
+    </section>
+   <div class="shorts">
+    <div class="Title-Shorts">
+      <img src="logo/YouTube Shorts.svg" class="Short-logo">
+      <p class="Text-Short">Shorts</p>
+    </div>
+   <div class="Not-Interested"><img src="shorts/Cross.svg" class="Close-Shorts"> <div class="tooltip">Not-Interested</div> </div> 
+  <section class="Shorts-preview-grid">
+    <div class="Shorts-preview">
+      <a href="https://www.youtube.com/shorts/aUDYWYqtAR4">
+    <div class="Shorts-Thumb Pi-Irrational">
+      <img class="Shorts-Picture" src="shorts/maxres2.jpg">
+    </div>
+    <div class="Text-shorts">
+      <p class="First-short">
+        "So close &#129295; , yet so far ♾️" Explanation and code in...</p>
+        <p class="Views-shorts">43M views</p>
+      </a>
+    </div>
+   </div> 
+ <div class="Shorts-preview">
+  <a href="https://www.youtube.com/shorts/dy5g9gxxprk">
+  <img class="Shorts-Picture" src="shorts/back.jpg">
+<div class="Text-shorts">
+  <p class="First-short">
+    White Blood Cells fighting under microscope!</p>
+    <p class="Views-shorts">62M views</p>
+  </a>
+</div>
+</div>
+<div class="Shorts-preview">
+<a href="https://www.youtube.com/shorts/gH4SsABvqP0">
+<img class="Shorts-Picture" src="shorts/Quant.jpg">
+<div class="Text-shorts">
+<p class="First-short">
+Google's Quantum Computer Achieves Quantum...</p>
+  <p class="Views-shorts">5.3M views</p>
+</a>
+</div>
+</div>
+<div class="Shorts-preview">
+<a href="https://www.youtube.com/shorts/uUP_Mj5jyy8">
+<img class="Shorts-Picture" src="shorts/rona.jpg">
+<div class="Text-shorts">
+<p class="First-short">
+  Ronaldo Bicycle kick &#128016; </p>
+  <p class="Views-shorts">12M views</p>
+</a>
+</div>
+</div>
+<div class="Shorts-preview">
+<a href="https://www.youtube.com/shorts/hx-vvozF6G0">
+<img class="Shorts-Picture" src="shorts/Last-s.jpg">
+<div class="Text-shorts Last-Shorts">
+<p class="First-short">How a Modern Nuclear BOMB works: Oppenheimer's...</p>
+  <p class="Views-shorts">3M views</p>
+</a>
+</div>
+</div>
+<div class="Ending-shorts">
+<hr>
+<button class="show-more">Show more <img class="Down" src="shorts/ending shorts.svg"> </button>
+</div>
+</section>
+<section class="video-grid second-lot">
+  <div class="video">
+    <a href="https://www.youtube.com/watch?v=6xvrKW2H_hA&t">
+      <div class="video-thumbnail America"><img src="sili.jpg" alt="In The Zone" class="Video-Picture silica"> <button class="Video-Time">8:47</button></div>
+    <div class="video-info-grid">
+      <a href="https://www.youtube.com/@Vox"> <div class="video-channel"><img src="vox.jpg" class="channel-profile"></a> </div>
+      <div class="video-info">
+        <img src="icons/three-dot.svg" class="Dots">
+        <a href="https://www.youtube.com/watch?v=6xvrKW2H_hA&t">
+          <p class="video-name">Why Silicon Valley is here</p>
+          <div class="Chan"><a href="https://www.youtube.com/@Vox"><p class="channel-name">Vox <span class="checkmark">&#10003;</span></p><div class="tooltip">Vox</div> </div></a>
+        <div class="cheackmark-align">
+          <p class="channel-views">822K views <span class="dot">&#183;</span> 6 months ago </p>
+        </div> 
+      </div>
+    </div> 
+  </a> 
+  </div>
+<div class="video">
+<a href="https://www.youtube.com/watch?v=M7-h3FO-KKo">
+  <div class="video-thumbnail Sail"><img src="Sail.jpg" alt="$456,000 Squid Game In Real Life!" class="Video-Picture beast"> <button class="Video-Time">17:07</button></div>
+<div class="video-info-grid ">
+<a href="https://www.youtube.com/@MarkRober"> <div class="video-channel"><img src="mark.jpg" class="channel-profile"></a>   </div>
+  <div class="video-info">
+    <img src="icons/three-dot.svg" class="Dots">
+    <a href="https://www.youtube.com/watch?v=M7-h3FO-KKo">
+      <p class="video-name">Testing If You Can Blow Your Own Sail</p>
+      <div class="Chan"><a href="https://www.youtube.com/@user-du6in2ry7i"><p class="channel-name">Mark Rober<span class="checkmark">&#10003;</span></p><div class="tooltip">Mark Rober</div> </div></a>
+      <p class="channel-views">5M views <span class="dot">&#183;</span> 2 days ago </p>
+  </div>
+</div>  
+</a>
+</div>
+<div class="video">
+<a href="https://www.youtube.com/watch?v=SbjpCH0sCqg">
+  <div class="video-thumbnail Coding"><img src="nepal.jpg" alt="Veritasium" class="Video-Picture"><button class="Video-Time">26:13</button></div>
+<div class="video-info-grid">
+  <a href="https://www.youtube.com/@CodingNepal">
+  <div class="video-channel"><img src="ok.jpg" class="channel-profile"> </a></div>
+  <div class="video-info">
+    <img src="icons/three-dot.svg" class="Dots">
+    <a href="https://www.youtube.com/watch?v=SbjpCH0sCqg">
+      <p class="video-name">Create A Fiverr Website Clone in HTML CSS and JavaScript |...</p>
+      <div class="Chan"><a href="https://www.youtube.com/@CodingNepal"><p class="channel-name">CodingNepal<span class="checkmark">&#10003;</span> </p><div class="tooltip">CodingNepal</div> </div></a>
+      <p class="channel-views">10k views <span class="dot">&#183;</span> 5 months ago </p>
+  </div>
+</div>  
+</a>
+</div>
+</section>
+   </main>
+    </body>
+</html>

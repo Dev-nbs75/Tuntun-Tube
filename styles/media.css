@@ -53,11 +53,11 @@
       overflow-x: hidden;
     }
     .video-grid{
-      margin-left: 90px;
+      margin-left: 100px !important;
       column-gap: 100px !important;
     }
     .second-lot{
-     margin-left: 90px;
+     margin-left: 100px !important;
       column-gap: 100px !important;
     }
     .beast-thumb{
